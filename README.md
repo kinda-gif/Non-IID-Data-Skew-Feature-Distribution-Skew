@@ -1,6 +1,16 @@
-# Feature Splitter
+# Feature Splitter Library (Apply non Independent and Identically Distributed Data Shifts)
 
-A Python library for splitting datasets into sub-datasets based on **Feature Distribution Skew**, using the column with the highest value differentiation. Offers tools for skew analysis, visualization, and preprocessing. Compatible with Pandas, NumPy, and Scikit-learn.
+A Python library for splitting datasets into sub-datasets based on **Feature Distribution Skew**, a type of non-IID (non-independent and identically distributed) data shift. Offers tools for skew analysis, visualization, and preprocessing. It is compatible with Pandas, NumPy, and Scikit-learn, providing a robust framework for analyzing and handling non-IID data distributions in **Machine Learning** workflows.
+
+## Mathematical Description of Feature Distribution Skew
+
+Feature distribution skew in non-IID (Independent and Identically Distributed) data distribution refers to the scenario where the marginal distributions of a feature vary across different sub-datasets. In more technical terms, let’s consider a feature (X). The probability distribution of (X), denoted as P(X), in a non-IID setting with feature distribution skew, means that the distribution Ρ_i (X) for part (i) differs from Ρ_j (X) for part (j), and so on for all parts involved.
+
+Here’s how we can mathematically represent this:
+
+$P_i (X) \neq P_j (X)$, $P_i (Y) = P_j (Y)$ for $i \neq j$
+
+This means that the feature (X) has different probabilities or occurrences in different subsets of the data.
 
 ## Installation
 
@@ -58,15 +68,6 @@ Splits a DataFrame into `n_splits` parts based on sorting by the column with the
 
 - `list of pd.DataFrame`: List of split DataFrames.
 
-## Mathematical Description of Feature Distribution Skew
-
-Feature distribution skew in non-IID (Independent and Identically Distributed) data distribution refers to the scenario where the marginal distributions of a feature vary across different sub-datasets. In more technical terms, let’s consider a feature (X). The probability distribution of (X), denoted as P(X), in a non-IID setting with feature distribution skew, means that the distribution Ρ_i (X) for part (i) differs from Ρ_j (X) for part (j), and so on for all parts involved.
-
-Here’s how we can mathematically represent this:
-
-$P_i (X) \neq P_j (X)$, $P_i (Y) = P_j (Y)$ for $i \neq j$
-
-This means that the feature (X) has different probabilities or occurrences in different subsets of the data.
 
 ## License
 
