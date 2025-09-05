@@ -15,7 +15,7 @@ Note: This library requires `pandas` to be installed.
 
 ## Usage
 
-The `feature_splitter` library provides a simple function to split a Pandas DataFrame into multiple parts based on the variance of its columns. This can be useful for creating balanced datasets for A/B testing or other analytical purposes.
+The `feature_splitter` library provides a methodological framework for generating non-IID data distributions by partitioning a Pandas DataFrame into multiple subsets based on the variance of its feature space. This partitioning process introduces controlled heterogeneity across subsets, thereby simulating feature distribution skew, a common characteristic in federated learning scenarios. Such functionality is essential for empirical investigations, as it enables the systematic evaluation of federated learning algorithms under realistic conditions of client data imbalance and distributional divergence.
 
 ### Example
 
@@ -57,6 +57,16 @@ Splits a DataFrame into `n_splits` parts based on sorting by the column with the
 **Returns:**
 
 - `list of pd.DataFrame`: List of split DataFrames.
+
+## Mathematical Description of Feature Distribution Skew
+
+Feature distribution skew in non-IID (Independent and Identically Distributed) data distribution refers to the scenario where the marginal distributions of a feature vary across different sub-datasets. In more technical terms, let’s consider a feature (X). The probability distribution of (X), denoted as P(X), in a non-IID setting with feature distribution skew, means that the distribution Ρ_i (X) for part (i) differs from Ρ_j (X) for part (j), and so on for all parts involved.
+
+Here’s how we can mathematically represent this:
+
+$P_i (X) \neq P_j (X)$, $P_i (Y) = P_j (Y)$ for $i \neq j$
+
+This means that the feature (X) has different probabilities or occurrences in different subsets of the data.
 
 ## License
 
