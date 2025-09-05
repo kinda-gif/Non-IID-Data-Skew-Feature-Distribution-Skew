@@ -1,4 +1,4 @@
-# Feature Splitter Library (Apply non Independent and Identically Distributed Data Shifts)
+# Feature Splitter Library
 
 A Python library for splitting datasets into sub-datasets based on **Feature Distribution Skew**, a type of non-IID (non-independent and identically distributed) data shift. Offers tools for skew analysis, visualization, and preprocessing. It is compatible with Pandas, NumPy, and Scikit-learn, providing a robust framework for analyzing and handling non-IID data distributions in **Machine Learning** workflows.
 
