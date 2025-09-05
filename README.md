@@ -15,7 +15,7 @@ Note: This library requires `pandas` to be installed.
 
 ## Usage
 
-The `feature_splitter` library provides a methodological framework for generating non-IID data distributions by partitioning a Pandas DataFrame into multiple subsets based on the variance of its feature space. This partitioning process introduces controlled heterogeneity across subsets, thereby simulating feature distribution skew, a common characteristic in federated learning scenarios. Such functionality is essential for empirical investigations, as it enables the systematic evaluation of federated learning algorithms under realistic conditions of client data imbalance and distributional divergence.
+The `feature_splitter` library provides a methodological framework for generating non-IID data distributions by partitioning a Pandas DataFrame into multiple subsets based on the variance of its feature space. This partitioning process introduces controlled heterogeneity across subsets, thereby simulating feature distribution skew, a common characteristic in **Federated Learning** scenarios. Such functionality is essential for empirical investigations, as it enables the systematic evaluation of federated learning algorithms under realistic conditions of client data imbalance and distributional divergence.
 
 ### Example
 
